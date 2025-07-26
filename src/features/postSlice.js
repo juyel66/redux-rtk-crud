@@ -15,6 +15,15 @@ const postSlice = createSlice({
         error: null
     },
 
+     reducers: {
+    deletePost: (state, action) => {
+      // action.payload হিসেবে id বা unique key আশা করছি
+      state.posts = state.posts.filter((post) => post._id !== action.payload);
+    },
+  },
+
+
+
     extraReducers: (builder) => {
         builder.addCase(fetchPost.pending, (state) => {
             state.isLoading = true;
@@ -35,5 +44,5 @@ const postSlice = createSlice({
   
 
 });
-
+export const { deletePost } = postSlice.actions;
 export default postSlice.reducer;
