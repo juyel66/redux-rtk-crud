@@ -33,8 +33,12 @@ const handleDelete = (id) => {
      <Link target="_blank" to="https://southest-asia.netlify.app/AddTourists" className="text-center mt-5 text-white px-2 py-1 rounded-[5px] bg-green-500 mb-3">Add Data</Link>
  </div>
 
-  {isLoading && <h1>Loading .....</h1>}
+ <div className="flex items-center justify-center">
+     {isLoading && <h1 className="text-3xl font-semibold  mt-56">Loading .....</h1>}
   {error && <h1>{error}</h1>}
+ </div>
+
+ 
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     {posts && posts.map((post, index) => (

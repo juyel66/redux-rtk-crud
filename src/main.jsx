@@ -9,10 +9,15 @@ import {
 import { Provider } from 'react-redux';
 import store from './store.js';
 import Home from './Components/Home.jsx';
+import Register from './Components/Register.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home> ,
+  },
+  {
+    path: "/register",
+    element: <Register></Register>
   },
 ]);
 
